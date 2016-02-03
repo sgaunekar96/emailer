@@ -1,8 +1,16 @@
- module.exports = {
+'use strict';
 
-    'facebookAuth' : {
-        'clientID'      : 'your-secret-clientID-here', // your App ID
-        'clientSecret'  : 'your-client-secret-here', // your App Secret
-        'callbackURL'   : 'http://localhost:8080/auth/facebook/callback'
-    }
+module.exports = {
+  db: {
+    production: "mongodb://localhost/junta",
+    development: "mongodb://localhost/junta",
+    test: "mongodb://localhost/test",
+  },
+  mailer: {
+    auth: {
+      user: 'masked.warrior.m@gmail.com',
+      pass: 'gotagotagota',
+    },
+    defaultFromAddress: 'First Last <masked.warrior.m@gmail.com>'
+  }
 };
